@@ -22,8 +22,8 @@ function sample_ajax_menu()
 /**
  * admin_enqueue_scripts
  */
-add_action('admin_enqueue_scripts', 'frs_admin_enqueue_scripts', 100);
-function frs_admin_enqueue_scripts()
+add_action('admin_enqueue_scripts', 'sample_ajax_admin_enqueue_scripts', 100);
+function sample_ajax_admin_enqueue_scripts()
 {
 	wp_enqueue_script('sample-ajax-admin-js',plugin_dir_url( __FILE__ )."script.js");
 }
