@@ -15,5 +15,9 @@ function ajax_sample_sum_callback()
 
     echo $total;
 
-    die();
+    /**
+     * Use wp_die() instead of exit() or die(). exit() or die()
+     * will returns additional 0 char in Ajax response
+     */
+    wp_die();
 }
