@@ -1,6 +1,7 @@
 <div class="wrap">
 	<h2>Sample Ajax</h2>
 	<p>WordPress ajax sum function on the admin page</p>
+	<?php wp_nonce_field('nonce_action', 'nonce_field'); ?>
 
 	<table class="form-table">
 		<tr>

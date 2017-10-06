@@ -14,8 +14,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'ajax.php');
  * admin menu
  */
 add_action( 'admin_menu', 'sample_ajax_menu' );
-function sample_ajax_menu() 
-{	
+function sample_ajax_menu() {	
 	add_menu_page('Sample Ajax','Sample Ajax','moderate_comments','wp-sample-ajax/admin-page.php');
 }
 
@@ -23,7 +22,6 @@ function sample_ajax_menu()
  * admin_enqueue_scripts
  */
 add_action('admin_enqueue_scripts', 'sample_ajax_admin_enqueue_scripts', 100);
-function sample_ajax_admin_enqueue_scripts()
-{
+function sample_ajax_admin_enqueue_scripts() {
 	wp_enqueue_script('sample-ajax-admin-js',plugin_dir_url( __FILE__ )."script.js");
 }
